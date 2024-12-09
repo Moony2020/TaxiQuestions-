@@ -5,21 +5,127 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Travelling From Questions Quiz</title>
     <style>
-      .correct {
-        color: green;
+      /* Basic resets */
+      body,
+      h1,
+      p,
+      button {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
       }
-      .incorrect {
-        color: red;
+
+      body {
+        background-color: #f9f9f9;
+        color: #333;
+        font-size: 16px;
+        padding: 20px;
       }
-      .checkbox {
-        width: 20px;
-        height: 20px;
+
+      h1 {
+        text-align: center;
+        font-size: 2em;
+        color: #2c3e50;
+        margin-bottom: 20px;
       }
-      .answer {
+
+      /* Form container */
+      #quizForm {
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        padding: 30px;
+        max-width: 900px;
+        margin: 0 auto;
+      }
+
+      /* Question styling */
+      .question {
+        font-size: 1.1em;
+        margin-bottom: 10px;
         font-weight: bold;
       }
-      .result {
+
+      .answers {
+        margin-bottom: 20px;
+      }
+
+      /* Answer radio buttons */
+      input[type="radio"] {
+        margin-right: 10px;
+      }
+
+      /* Answer styling */
+      label {
+        margin-bottom: 10px;
+        display: block;
+        cursor: pointer;
+        padding: 5px;
+        transition: background-color 0.3s ease;
+        font-size: 1.1em;
+      }
+
+      label:hover {
+        background-color: #f2f2f2;
+        border-radius: 4px;
+      }
+
+      /* Results styling */
+      .correct {
+        color: #2ecc71;
+      }
+
+      .incorrect {
+        color: #e74c3c;
+      }
+
+      .no-answer {
+        color: #f39c12;
+      }
+
+      /* Button styling */
+      button {
+        background-color: #3498db;
+        color: white;
+        font-size: 1.1em;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 100%;
         margin-top: 20px;
+        transition: background-color 0.3s ease;
+      }
+
+      button:hover {
+        background-color: #2980b9;
+      }
+
+      /* Final results container */
+      .result {
+        margin-top: 40px;
+        text-align: center;
+      }
+
+      .answer {
+        font-weight: bold;
+        font-size: 1.2em;
+        margin-top: 20px;
+      }
+
+      /* Responsive design */
+      @media (max-width: 768px) {
+        h1 {
+          font-size: 1.6em;
+        }
+
+        .answers {
+          margin-bottom: 15px;
+        }
+
+        button {
+          font-size: 1em;
+        }
       }
     </style>
   </head>
