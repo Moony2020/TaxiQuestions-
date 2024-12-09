@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travelling From Questions Quiz</title>
+    <style>
+      .correct {
+        color: green;
+      }
+      .incorrect {
+        color: red;
+      }
+      .checkbox {
+        width: 20px;
+        height: 20px;
+      }
+      .answer {
+        font-weight: bold;
+      }
+      .result {
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Travelling From Questions Quiz</h1>
+    <form id="quizForm">
+      <!-- Questions Q1 to Q60 -->
+      <div>
+        <p>Q1: Corporation Street, Rotherham to Laughton</p>
+        <input type="radio" name="q1" value="a" /> a. Thurcroft<br />
+        <input type="radio" name="q1" value="b" /> b. Dalton<br />
+        <input type="radio" name="q1" value="c" /> c. Ravenfield<br />
+        <input type="radio" name="q1" value="d" /> d. Rotherham<br />
+        <span id="q1Result"></span>
+      </div>
+
+      <div>
+        <p>Q2: Ship Hill Taxi Rank to Thrybergh</p>
+        <input type="radio" name="q2" value="a" /> a. Ravenfield<br />
+        <input type="radio" name="q2" value="b" /> b. Brinsworth<br />
+        <input type="radio" name="q2" value="c" /> c. Dalton<br />
+        <input type="radio" name="q2" value="d" /> d. Wickersley<br />
+        <span id="q2Result"></span>
+      </div>
+
+      <div>
+        <p>Q3: Hooton Roberts to Three Horseshoes, Wickersley</p>
+        <input type="radio" name="q3" value="a" /> a. Ravenfield<br />
+        <input type="radio" name="q3" value="b" /> b. Wickersley<br />
+        <input type="radio" name="q3" value="c" /> c. Rotherham<br />
+        <input type="radio" name="q3" value="d" /> d. North Anston<br />
+        <span id="q3Result"></span>
+      </div>
+
+      <div>
+        <p>Q4: Wath upon Dearne to Golden Ball, Whiston</p>
+        <input type="radio" name="q4" value="a" /> a. North Anston<br />
+        <input type="radio" name="q4" value="b" /> b. Rotherham<br />
+        <input type="radio" name="q4" value="c" /> c. Thurcroft<br />
+        <input type="radio" name="q4" value="d" /> d. Brinsworth<br />
+        <span id="q4Result"></span>
+      </div>
+
+      <div>
+        <p>Q5: Thurcroft to Café Sport Bar, Swinton</p>
+        <input type="radio" name="q5" value="a" /> a. Dalton<br />
+        <input type="radio" name="q5" value="b" /> b. Greasbrough<br />
+        <input type="radio" name="q5" value="c" /> c. Todwick<br />
+        <input type="radio" name="q5" value="d" /> d. Wickersley<br />
+        <span id="q5Result"></span>
+      </div>
+
+      <div>
+        <p>Q6: Bramley to Todwick</p>
+        <input type="radio" name="q6" value="a" /> a. Brinsworth<br />
+        <input type="radio" name="q6" value="b" /> b. Thurcroft<br />
+        <input type="radio" name="q6" value="c" /> c. Brampton Bierlow<br />
+        <input type="radio" name="q6" value="d" /> d. Clifton<br />
+        <span id="q6Result"></span>
+      </div>
+
+      <div>
+        <p>Q7: Swallownest to Woodsetts</p>
+        <input type="radio" name="q7" value="a" /> a. Todwick<br />
+        <input type="radio" name="q7" value="b" /> b. Clifton<br />
+        <input type="radio" name="q7" value="c" /> c. North Anston<br />
+        <input type="radio" name="q7" value="d" /> d. Laughton Common<br />
+        <span id="q7Result"></span>
+      </div>
+
+      <div>
+        <p>Q8: Treeton to The Sportsman, Thorpe Hesley</p>
+        <input type="radio" name="q8" value="a" /> a. Brinsworth<br />
+        <input type="radio" name="q8" value="b" /> b. Ravenfield<br />
+        <input type="radio" name="q8" value="c" /> c. Brinsworth<br />
+        <input type="radio" name="q8" value="d" /> d. Greasbrough<br />
+        <span id="q8Result"></span>
+      </div>
+
+      <div>
+        <p>Q9: Dinnington to Swallownest</p>
+        <input type="radio" name="q9" value="a" /> a. Clifton<br />
+        <input type="radio" name="q9" value="b" /> b. Aston<br />
+        <input type="radio" name="q9" value="c" /> c. Laughton Common<br />
+        <input type="radio" name="q9" value="d" /> d. Hellaby<br />
+        <span id="q9Result"></span>
+      </div>
+
+      <div>
+        <p>Q10: Corporation Street Taxi Rank to Thorpe Hesley</p>
+        <input type="radio" name="q10" value="a" /> a. Dalton<br />
+        <input type="radio" name="q10" value="b" /> b. Greasbrough<br />
+        <input type="radio" name="q10" value="c" /> c. Kimberworth<br />
+        <input type="radio" name="q10" value="d" /> d. Todwick<br />
+        <span id="q10Result"></span>
+      </div>
+
+      <div>
+        <p>Q11: Firbeck to North Anston</p>
+        <input type="radio" name="q11" value="a" /> a. Laughton Common<br />
+        <input type="radio" name="q11" value="b" /> b. North Anston<br />
+        <input type="radio" name="q11" value="c" /> c. Eastwood<br />
+        <input type="radio" name="q11" value="d" /> d. Dinnington<br />
+        <span id="q11Result"></span>
+      </div>
+
+      <div>
+        <p>Q12: Whiston to Station Hotel, Swinton</p>
+        <input type="radio" name="q12" value="a" /> a. Kilnhurst<br />
+        <input type="radio" name="q12" value="b" /> b. Todwick<br />
+        <input type="radio" name="q12" value="c" /> c. North Anston<br />
+        <input type="radio" name="q12" value="d" /> d. Dalton<br />
+        <span id="q12Result"></span>
+      </div>
+
+      <div>
+        <p>Q13: Wath upon Dearne to Brentwood Hotel, Moorgate</p>
+        <input type="radio" name="q13" value="a" /> a. Brampton Bierlow<br />
+        <input type="radio" name="q13" value="b" /> b. Dalton<br />
+        <input type="radio" name="q13" value="c" /> c. Rawmarsh<br />
+        <input type="radio" name="q13" value="d" /> d. Hellaby<br />
+        <span id="q13Result"></span>
+      </div>
+
+      <div>
+        <p>Q14: Greasbrough to Consort Hotel, Thurcroft</p>
+        <input type="radio" name="q14" value="a" /> a. Rotherham<br />
+        <input type="radio" name="q14" value="b" /> b. Clifton<br />
+        <input type="radio" name="q14" value="c" /> c. Wickersley<br />
+        <input type="radio" name="q14" value="d" /> d. Brampton Bierlow<br />
+        <span id="q14Result"></span>
+      </div>
+
+      <div>
+        <p>Q15: Market Street Taxi Rank to Meadowbank</p>
+        <input type="radio" name="q15" value="a" /> a. Greasbrough<br />
+        <input type="radio" name="q15" value="b" /> b. Brinsworth<br />
+        <input type="radio" name="q15" value="c" /> c. Hellaby<br />
+        <input type="radio" name="q15" value="d" /> d. Ferham<br />
+        <span id="q15Result"></span>
+      </div>
+
+      <div>
+        <p>Q16: Bramley to Meadowhall Shopping Centre</p>
+        <input type="radio" name="q16" value="a" /> a. Dalton<br />
+        <input type="radio" name="q16" value="b" /> b. Hellaby<br />
+        <input type="radio" name="q16" value="c" /> c. Wickersley<br />
+        <input type="radio" name="q16" value="d" /> d. Rawmarsh<br />
+        <span id="q16Result"></span>
+      </div>
+
+      <div>
+        <p>Q17: Brampton-en-le-Morthen to Horse and Jockey, Rawmarsh</p>
+        <input type="radio" name="q17" value="a" /> a. Eastwood<br />
+        <input type="radio" name="q17" value="b" /> b. Wickersley<br />
+        <input type="radio" name="q17" value="c" /> c. Hellaby<br />
+        <input type="radio" name="q17" value="d" /> d. Dalton<br />
+        <span id="q17Result"></span>
+      </div>
+
+      <div>
+        <p>Q18: Rotherham Train Station Taxi Rank to Ibis Hotel, Bramley</p>
+        <input type="radio" name="q18" value="a" /> a. Wickersley<br />
+        <input type="radio" name="q18" value="b" /> b. Brampton Bierlow<br />
+        <input type="radio" name="q18" value="c" /> c. Dalton<br />
+        <input type="radio" name="q18" value="d" /> d. Brinsworth<br />
+        <span id="q18Result"></span>
+      </div>
+
+      <div>
+        <p>Q19: Frederick Street Taxi Rank to Broom</p>
+        <input type="radio" name="q19" value="a" /> a. Todwick<br />
+        <input type="radio" name="q19" value="b" /> b. Clifton<br />
+        <input type="radio" name="q19" value="c" /> c. Rawmarsh<br />
+        <input type="radio" name="q19" value="d" /> d. Hellaby<br />
+        <span id="q19Result"></span>
+      </div>
+
+      <div>
+        <p>Q20: Brinsworth to Beighton</p>
+        <input type="radio" name="q20" value="a" /> a. Rawmarsh<br />
+        <input type="radio" name="q20" value="b" /> b. Laughton Common<br />
+        <input type="radio" name="q20" value="c" /> c. Swallownest<br />
+        <input type="radio" name="q20" value="d" /> d. Greasbrough<br />
+        <span id="q20Result"></span>
+      </div>
+
+      <div>
+        <p>Q21: South Anston to Gildingwells</p>
+        <input type="radio" name="q21" value="a" /> a. Rotherham<br />
+        <input type="radio" name="q21" value="b" /> b. Todwick<br />
+        <input type="radio" name="q21" value="c" /> c. Clifton<br />
+        <input type="radio" name="q21" value="d" /> d. Dinnington<br />
+        <span id="q21Result"></span>
+      </div>
+
+      <div>
+        <p>Q22: Hooton Roberts to Treeton</p>
+        <input type="radio" name="q22" value="a" /> a. North Anston<br />
+        <input type="radio" name="q22" value="b" /> b. Rotherham<br />
+        <input type="radio" name="q22" value="c" /> c. Dalton<br />
+        <input type="radio" name="q22" value="d" /> d. Rawmarsh<br />
+        <span id="q22Result"></span>
+      </div>
+
+      <div>
+        <p>Q23: Wath-Upon-Dearne to Holiday Inn Hotel, Canklow</p>
+        <input type="radio" name="q23" value="a" /> a. Brampton Bierlow<br />
+        <input type="radio" name="q23" value="b" /> b. Rawmarsh<br />
+        <input type="radio" name="q23" value="c" /> c. Greasbrough<br />
+        <input type="radio" name="q23" value="d" /> d. Brinsworth<br />
+        <span id="q23Result"></span>
+      </div>
+
+      <div>
+        <p>Q24: Kiveton Park to Old Ravenfield</p>
+        <input type="radio" name="q24" value="a" /> a. Todwick<br />
+        <input type="radio" name="q24" value="b" /> b. Clifton<br />
+        <input type="radio" name="q24" value="c" /> c. Brinsworth<br />
+        <input type="radio" name="q24" value="d" /> d. Hellaby<br />
+        <span id="q24Result"></span>
+      </div>
+
+      <div>
+        <p>Q25: Kiveton Park to Laughton</p>
+        <input type="radio" name="q25" value="a" /> a. Rawmarsh<br />
+        <input type="radio" name="q25" value="b" /> b. Todwick<br />
+        <input type="radio" name="q25" value="c" /> c. Laughton Common<br />
+        <input type="radio" name="q25" value="d" /> d. Todwick<br />
+        <span id="q25Result"></span>
+      </div>
+
+      <div>
+        <p>Q26: Laughton Common to Catcliffe Primary School</p>
+        <input type="radio" name="q26" value="a" /> a. Dalton<br />
+        <input type="radio" name="q26" value="b" /> b. Eastwood<br />
+        <input type="radio" name="q26" value="c" /> c. Whiston<br />
+        <input type="radio" name="q26" value="d" /> d. Dalton<br />
+        <span id="q26Result"></span>
+      </div>
+
+      <div>
+        <p>Q27: Todwick to Ibis Hotel, Bramley</p>
+        <input type="radio" name="q27" value="a" /> a. Greasbrough<br />
+        <input type="radio" name="q27" value="b" /> b. Brinsworth<br />
+        <input type="radio" name="q27" value="c" /> c. Brampton Bierlow<br />
+        <input type="radio" name="q27" value="d" /> d. Thurcroft<br />
+        <span id="q27Result"></span>
+      </div>
+
+      <div>
+        <p>Q28: Rotherham Bus Station to Safeway Superstore, Dinnington</p>
+        <input type="radio" name="q28" value="a" /> a. North Anston<br />
+        <input type="radio" name="q28" value="b" /> b. Todwick<br />
+        <input type="radio" name="q28" value="c" /> c. Laughton Common<br />
+        <input type="radio" name="q28" value="d" /> d. Rotherham<br />
+        <span id="q28Result"></span>
+      </div>
+
+      <div>
+        <p>Q29: Mexborough to Scholes</p>
+        <input type="radio" name="q29" value="a" /> a. Clifton<br />
+        <input type="radio" name="q29" value="b" /> b. Swinton<br />
+        <input type="radio" name="q29" value="c" /> c. Clifton<br />
+        <input type="radio" name="q29" value="d" /> d. Eastwood<br />
+        <span id="q29Result"></span>
+      </div>
+
+      <div>
+        <p>Q30: New York Stadium to Sunnyside</p>
+        <input type="radio" name="q30" value="a" /> a. Dalton<br />
+        <input type="radio" name="q30" value="b" /> b. Greasbrough<br />
+        <input type="radio" name="q30" value="c" /> c. North Anston<br />
+        <input type="radio" name="q30" value="d" /> d. Ravenfield<br />
+        <span id="q30Result"></span>
+      </div>
+
+      <div>
+        <p>Q31: Orgreave to Rotherham Museum, Clifton Park</p>
+        <input type="radio" name="q31" value="a" /> a. Laughton Common<br />
+        <input type="radio" name="q31" value="b" /> b. Brinsworth<br />
+        <input type="radio" name="q31" value="c" /> c. Todwick<br />
+        <input type="radio" name="q31" value="d" /> d. Hellaby<br />
+        <span id="q31Result"></span>
+      </div>
+
+      <div>
+        <p>Q32: Frederick Street Taxi Rank to Asda Superstore, Dalton</p>
+        <input type="radio" name="q32" value="a" /> a. Rotherham<br />
+        <input type="radio" name="q32" value="b" /> b. Eastwood<br />
+        <input type="radio" name="q32" value="c" /> c. Todwick<br />
+        <input type="radio" name="q32" value="d" /> d. Clifton<br />
+        <span id="q32Result"></span>
+      </div>
+
+      <div>
+        <p>Q33: Sunnyside to Kiveton Park</p>
+        <input type="radio" name="q33" value="a" /> a. Maltby<br />
+        <input type="radio" name="q33" value="b" /> b. Rotherham<br />
+        <input type="radio" name="q33" value="c" /> c. Greasbrough<br />
+        <input type="radio" name="q33" value="d" /> d. Todwick<br />
+        <span id="q33Result"></span>
+      </div>
+
+      <div>
+        <p>Q34: Riverside House to Maltby</p>
+        <input type="radio" name="q34" value="a" /> a. Dalton<br />
+        <input type="radio" name="q34" value="b" /> b. Ravenfield<br />
+        <input type="radio" name="q34" value="c" /> c. Hellaby<br />
+        <input type="radio" name="q34" value="d" /> d. Rawmarsh<br />
+        <span id="q34Result"></span>
+      </div>
+
+      <div>
+        <p>Q35: Greasbrough to Wombwell</p>
+        <input type="radio" name="q35" value="a" /> a. Rawmarsh<br />
+        <input type="radio" name="q35" value="b" /> b. Brampton Bierlow<br />
+        <input type="radio" name="q35" value="c" /> c. Todwick<br />
+        <input type="radio" name="q35" value="d" /> d. North Anston<br />
+        <span id="q35Result"></span>
+      </div>
+
+      <div>
+        <p>Q36: Oldcotes to Rotherham Train Station</p>
+        <input type="radio" name="q36" value="a" /> a. Maltby<br />
+        <input type="radio" name="q36" value="b" /> b. Laughton Common<br />
+        <input type="radio" name="q36" value="c" /> c. Brampton Bierlow<br />
+        <input type="radio" name="q36" value="d" /> d. Ravenfield<br />
+        <span id="q36Result"></span>
+      </div>
+
+      <div>
+        <p>Q37: Dinnington to Clifton Lane Rugby Ground</p>
+        <input type="radio" name="q37" value="a" /> a. Ravenfield<br />
+        <input type="radio" name="q37" value="b" /> b. Laughton Common<br />
+        <input type="radio" name="q37" value="c" /> c. Dalton<br />
+        <input type="radio" name="q37" value="d" /> d. Clifton<br />
+        <span id="q37Result"></span>
+      </div>
+
+      <div>
+        <p>Q38: Dalton to Aston Hall Hotel</p>
+        <input type="radio" name="q38" value="a" /> a. Eastwood<br />
+        <input type="radio" name="q38" value="b" /> b. Brampton Bierlow<br />
+        <input type="radio" name="q38" value="c" /> c. Aughton<br />
+        <input type="radio" name="q38" value="d" /> d. Todwick<br />
+        <span id="q38Result"></span>
+      </div>
+
+      <div>
+        <p>Q39: Wath upon Dearne to Rotherham Town Hall</p>
+        <input type="radio" name="q39" value="a" /> a. Rotherham<br />
+        <input type="radio" name="q39" value="b" /> b. North Anston<br />
+        <input type="radio" name="q39" value="c" /> c. Greasbrough<br />
+        <input type="radio" name="q39" value="d" /> d. Rawmarsh<br />
+        <span id="q39Result"></span>
+      </div>
+
+      <div>
+        <p>Q40: Brampton Bierlow to New York Stadium</p>
+        <input type="radio" name="q40" value="a" /> a. Clifton<br />
+        <input type="radio" name="q40" value="b" /> b. Todwick<br />
+        <input type="radio" name="q40" value="c" /> c. Greasbrough<br />
+        <input type="radio" name="q40" value="d" /> d. Hellaby<br />
+        <span id="q40Result"></span>
+      </div>
+
+      <div>
+        <p>Q41: Kimberworth Park to Rother Valley College, Dinnington</p>
+        <input type="radio" name="q41" value="a" /> a. Eastwood<br />
+        <input type="radio" name="q41" value="b" /> b. Laughton Common<br />
+        <input type="radio" name="q41" value="c" /> c. Rotherham<br />
+        <input type="radio" name="q41" value="d" /> d. Dalton<br />
+        <span id="q41Result"></span>
+      </div>
+
+      <div>
+        <p>Q42: King Henry, Bramley to Rotherham Town Centre</p>
+        <input type="radio" name="q42" value="a" /> a. Wickersley<br />
+        <input type="radio" name="q42" value="b" /> b. Eastwood<br />
+        <input type="radio" name="q42" value="c" /> c. Brampton Bierlow<br />
+        <input type="radio" name="q42" value="d" /> d. Eastwood<br />
+        <span id="q42Result"></span>
+      </div>
+
+      <div>
+        <p>Q43: Swinton to Tesco Superstore, Rotherham</p>
+        <input type="radio" name="q43" value="a" /> a. Hellaby<br />
+        <input type="radio" name="q43" value="b" /> b. Wickersley<br />
+        <input type="radio" name="q43" value="c" /> c. Ravenfield<br />
+        <input type="radio" name="q43" value="d" /> d. Rawmarsh<br />
+        <span id="q43Result"></span>
+      </div>
+
+      <div>
+        <p>Q44: Woodsetts to Black Lion, Firbeck</p>
+        <input type="radio" name="q44" value="a" /> a. Dalton<br />
+        <input type="radio" name="q44" value="b" /> b. Clifton<br />
+        <input type="radio" name="q44" value="c" /> c. Letwell<br />
+        <input type="radio" name="q44" value="d" /> d. Brampton Bierlow<br />
+        <span id="q44Result"></span>
+      </div>
+
+      <div>
+        <p>Q45: Kiveton Park to Woodsetts</p>
+        <input type="radio" name="q45" value="a" /> a. Laughton Common<br />
+        <input type="radio" name="q45" value="b" /> b. Brinsworth<br />
+        <input type="radio" name="q45" value="c" /> c. Laughton Common<br />
+        <input type="radio" name="q45" value="d" /> d. South Anston<br />
+        <span id="q45Result"></span>
+      </div>
+
+      <div>
+        <p>Q46: Todwick to Harthill</p>
+        <input type="radio" name="q46" value="a" /> a. Hellaby<br />
+        <input type="radio" name="q46" value="b" /> b. Greasbrough<br />
+        <input type="radio" name="q46" value="c" /> c. Kiveton Park<br />
+        <input type="radio" name="q46" value="d" /> d. Dalton<br />
+        <span id="q46Result"></span>
+      </div>
+
+      <div>
+        <p>Q47: Ulley to Doncaster Gate Hospital</p>
+        <input type="radio" name="q47" value="a" /> a. Todwick<br />
+        <input type="radio" name="q47" value="b" /> b. Whiston<br />
+        <input type="radio" name="q47" value="c" /> c. Clifton<br />
+        <input type="radio" name="q47" value="d" /> d. Laughton Common<br />
+        <span id="q47Result"></span>
+      </div>
+
+      <div>
+        <p>Q48: Brinsworth to Hellaby Industrial Estate</p>
+        <input type="radio" name="q48" value="a" /> a. Bramley<br />
+        <input type="radio" name="q48" value="b" /> b. Brampton Bierlow<br />
+        <input type="radio" name="q48" value="c" /> c. North Anston<br />
+        <input type="radio" name="q48" value="d" /> d. Rotherham<br />
+        <span id="q48Result"></span>
+      </div>
+
+      <div>
+        <p>Q49: Todwick to Yate’s Wine Lodge, Rotherham</p>
+        <input type="radio" name="q49" value="a" /> a. Rawmarsh<br />
+        <input type="radio" name="q49" value="b" /> b. Whiston<br />
+        <input type="radio" name="q49" value="c" /> c. Eastwood<br />
+        <input type="radio" name="q49" value="d" /> d. Greasbrough<br />
+        <span id="q49Result"></span>
+      </div>
+
+      <div>
+        <p>Q50: Thorpe Hesley to Rotherham District General Hospital</p>
+        <input type="radio" name="q50" value="a" /> a. Rotherham<br />
+        <input type="radio" name="q50" value="b" /> b. Todwick<br />
+        <input type="radio" name="q50" value="c" /> c. Kimberworth<br />
+        <input type="radio" name="q50" value="d" /> d. Ravenfield<br />
+        <span id="q50Result"></span>
+      </div>
+
+      <div>
+        <p>Q51: Wales to Treeton</p>
+        <input type="radio" name="q51" value="a" /> a. Hellaby<br />
+        <input type="radio" name="q51" value="b" /> b. Rotherham<br />
+        <input type="radio" name="q51" value="c" /> c. Hellaby<br />
+        <input type="radio" name="q51" value="d" /> d. Aughton<br />
+        <span id="q51Result"></span>
+      </div>
+
+      <div>
+        <p>Q52: Swinton to Riverside House, Rotherham</p>
+        <input type="radio" name="q52" value="a" /> a. Ravenfield<br />
+        <input type="radio" name="q52" value="b" /> b. Dalton<br />
+        <input type="radio" name="q52" value="c" /> c. Rawmarsh<br />
+        <input type="radio" name="q52" value="d" /> d. Clifton<br />
+        <span id="q52Result"></span>
+      </div>
+
+      <div>
+        <p>Q53: Bramley to Kiveton Park</p>
+        <input type="radio" name="q53" value="a" /> a. Hellaby<br />
+        <input type="radio" name="q53" value="b" /> b. Todwick<br />
+        <input type="radio" name="q53" value="c" /> c. Hellaby<br />
+        <input type="radio" name="q53" value="d" /> d. Dalton<br />
+        <span id="q53Result"></span>
+      </div>
+
+      <div>
+        <p>Q54: Hooton Roberts to Dinnington</p>
+        <input type="radio" name="q54" value="a" /> a. Laughton Common<br />
+        <input type="radio" name="q54" value="b" /> b. Eastwood<br />
+        <input type="radio" name="q54" value="c" /> c. Brinsworth<br />
+        <input type="radio" name="q54" value="d" /> d. Rotherham<br />
+        <span id="q54Result"></span>
+      </div>
+
+      <div>
+        <p>Q55: The Hind, Whiston to Horse and Jockey, Rawmarsh</p>
+        <input type="radio" name="q55" value="a" /> a. Hellaby<br />
+        <input type="radio" name="q55" value="b" /> b. Parkgate<br />
+        <input type="radio" name="q55" value="c" /> c. Brampton Bierlow<br />
+        <input type="radio" name="q55" value="d" /> d. Laughton Common<br />
+        <span id="q55Result"></span>
+      </div>
+
+      <div>
+        <p>Q56: Market Street to Rockingham Arms Hotel, Wentworth</p>
+        <input type="radio" name="q56" value="a" /> a. Dalton<br />
+        <input type="radio" name="q56" value="b" /> b. Eastwood<br />
+        <input type="radio" name="q56" value="c" /> c. Greasbrough<br />
+        <input type="radio" name="q56" value="d" /> d. Ravenfield<br />
+        <span id="q56Result"></span>
+      </div>
+
+      <div>
+        <p>Q57: Swallownest to Queens Hotel, Maltby</p>
+        <input type="radio" name="q57" value="a" /> a. Clifton<br />
+        <input type="radio" name="q57" value="b" /> b. Rotherham<br />
+        <input type="radio" name="q57" value="c" /> c. Todwick<br />
+        <input type="radio" name="q57" value="d" /> d. Thurcroft<br />
+        <span id="q57Result"></span>
+      </div>
+
+      <div>
+        <p>Q58: Bramley to Mexborough</p>
+        <input type="radio" name="q58" value="a" /> a. Brampton Bierlow<br />
+        <input type="radio" name="q58" value="b" /> b. Ravenfield<br />
+        <input type="radio" name="q58" value="c" /> c. Hooton Roberts<br />
+        <input type="radio" name="q58" value="d" /> d. Eastwood<br />
+        <span id="q58Result"></span>
+      </div>
+
+      <div>
+        <p>Q59: Rotherham Train Station Taxi Rank to Hellaby Hall Hotel</p>
+        <input type="radio" name="q59" value="a" /> a. Greasbrough<br />
+        <input type="radio" name="q59" value="b" /> b. Wickersley<br />
+        <input type="radio" name="q59" value="c" /> c. Clifton<br />
+        <input type="radio" name="q59" value="d" /> d. Ravenfield<br />
+        <span id="q59Result"></span>
+      </div>
+
+      <div>
+        <p>Q60: Masons, Wickersley to Brampton-en-le-Morthen</p>
+        <input type="radio" name="q60" value="a" /> a. Thurcroft<br />
+        <input type="radio" name="q60" value="b" /> b. Brinsworth<br />
+        <input type="radio" name="q60" value="c" /> c. Rotherham<br />
+        <input type="radio" name="q60" value="d" /> d. North Anston<br />
+        <span id="q60Result"></span>
+      </div>
+
+      <div class="result">
+        <button type="button" onclick="submitQuiz()">Submit</button>
+      </div>
+    </form>
+
+    <div id="correctAnswers" class="answer"></div>
+
+    <script>
+      const correctAnswers = {
+        q1: "a",
+        q2: "c",
+        q3: "a",
+        q4: "b",
+        q5: "d",
+        q6: "b",
+        q7: "c",
+        q8: "a",
+        q9: "b",
+        q10: "c",
+        q11: "d",
+        q12: "a",
+        q13: "c",
+        q14: "c",
+        q15: "d",
+        q16: "c",
+        q17: "b",
+        q18: "a",
+        q19: "b",
+        q20: "c",
+        q21: "d",
+        q22: "c",
+        q23: "b",
+        q24: "a",
+        q25: "b",
+        q26: "c",
+        q27: "d",
+        q28: "c",
+        q29: "b",
+        q30: "a",
+        q31: "b",
+        q32: "b",
+        q33: "d",
+        q34: "c",
+        q35: "b",
+        q36: "a",
+        q37: "b",
+        q38: "c",
+        q39: "d",
+        q40: "c",
+        q41: "b",
+        q42: "a",
+        q43: "d",
+        q44: "c",
+        q45: "d",
+        q46: "c",
+        q47: "b",
+        q48: "a",
+        q49: "b",
+        q50: "c",
+        q51: "d",
+        q52: "c",
+        q53: "b",
+        q54: "a",
+        q55: "b",
+        q56: "c",
+        q57: "d",
+        q58: "c",
+        q59: "b",
+        q60: "a"
+      };
+
+      function submitQuiz() {
+        let score = 0;
+
+        // Loop through all 60 questions
+        for (let i = 1; i <= 60; i++) {
+          const userAnswer = document.querySelector(
+            `input[name="q${i}"]:checked`
+          );
+          const resultElement = document.getElementById(`q${i}Result`);
+
+          if (userAnswer) {
+            if (userAnswer.value === correctAnswers[`q${i}`]) {
+              resultElement.innerHTML = "✔ Correct";
+              resultElement.classList.add("correct");
+              resultElement.classList.remove("incorrect");
+            } else {
+              resultElement.innerHTML = "❌ Incorrect";
+              resultElement.classList.add("incorrect");
+              resultElement.classList.remove("correct");
+            }
+          } else {
+            resultElement.innerHTML = "No answer selected";
+          }
+        }
+
+        // Display all correct answers at the end
+        let answerList = "<h2>Correct Answers:</h2>";
+        for (let i = 1; i <= 60; i++) {
+          answerList += `<p>Q${i}: ${correctAnswers[`q${i}`]}</p>`;
+        }
+
+        document.getElementById("correctAnswers").innerHTML = answerList;
+      }
+    </script>
+  </body>
+</html>
